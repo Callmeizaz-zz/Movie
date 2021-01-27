@@ -67,6 +67,9 @@ const StyledServices = styled(StyleAbout)`
     width: 70%;
     padding: 2rem 0rem 4rem 0rem;
   }
+  @media (max-width: 1280px) {
+    display: block;
+  }
 `;
 
 const StyleSerDesc = styled.div`
@@ -80,6 +83,9 @@ const StyleSerDesc = styled.div`
 const StyleCards = styled.div`
   display: flex;
   flex-wrap: wrap;
+  @media (max-width: 1280px) {
+    justify-content: center;
+  }
 `;
 
 const StyleCard = styled.div`

@@ -6,6 +6,8 @@ import FaqSection from "../components/FaqSection";
 //Animation Framer motion
 import { motion } from "framer-motion";
 import { AnimatePage } from "../Animations/Animation";
+//import resulable comp
+import ScrollTop from "../ui/useScrollTop";
 
 const AboutUs = () => {
   return (
@@ -19,6 +21,7 @@ const AboutUs = () => {
         <AboutSection />
         <ServiceSection />
         <FaqSection />
+        <ScrollTop />
       </motion.div>
     </React.Fragment>
   );

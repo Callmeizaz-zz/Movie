@@ -85,11 +85,13 @@ const MovieDetailComp = () => {
             <p>Total Reviews {review.length}</p>
             {review.length <= 0 && <h3>No reviews</h3>}
             {review.map((review) => (
-              <Review
-                author={review.author}
-                reviews={review.content}
-                key={review.id}
-              />
+              <Hide>
+                <Review
+                  author={review.author}
+                  reviews={review.content}
+                  key={review.id}
+                />
+              </Hide>
             ))}
           </ReviewStyled>
         </MovDetailStyled>
@@ -140,6 +142,10 @@ const StyledDesc = styled.div`
     margin: 5px 2px;
     padding: 0.2rem 0.5rem;
   }
+  @media (max-width: 1200px) {
+    padding: 0;
+    margin-top: 3rem;
+  }
 `;
 const HeadLineStyled = styled.div`
   display: flex;
@@ -153,6 +159,22 @@ const HeadLineStyled = styled.div`
     width: auto;
     height: 70vh;
   }
+  @media (max-width: 1200px) {
+    display: block;
+    img {
+      object-fit: cover;
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+
+  @media (max-width: 600px) {
+    padding: 2rem 3rem;
+  }
+`;
+const Hide = styled.div`
+  overflow: hidden;
 `;
 
 const ReviewStyled = styled.div`
@@ -175,6 +197,9 @@ const ReviewStyled = styled.div`
     height: 0.2rem;
     width: 100%;
     margin: 1rem 0rem;
+  }
+  @media (max-width: 600px) {
+    padding: 2rem 3rem;
   }
 `;
 
